@@ -1,0 +1,501 @@
+/* 🌈 Paleta suave e moderna */
+:root {
+  --bg-color: #f9f9fb;
+  --primary-color: #34495e;
+  --accent-color: #6c5ce7;
+  --text-color: #2d3436;
+  --muted-text: #95a5a6;
+  --highlight-bg: #e0e7ff;
+  --highlight-text: #5f27cd;
+  --card-bg: #ffffff;
+  --border-color: #dcdde1;
+}
+
+/* 🌤️ Fundo com gradiente suave */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(145deg, #f9f9fb, #eef1f5);
+  color: var(--text-color);
+  padding: 40px;
+  line-height: 1.6;
+}
+
+/* 📌 Títulos */
+h1,
+h2,
+h3 {
+  color: var(--primary-color);
+}
+
+h1 {
+  font-size: 2.4em;
+  margin-bottom: 10px;
+}
+
+h2 {
+  margin-top: 30px;
+  font-size: 1.8em;
+}
+
+h3 {
+  margin-top: 20px;
+  font-size: 1.4em;
+}
+
+p {
+  font-size: 0.9em;
+  color: #333; /* Cor escura para melhor legibilidade */
+  margin-bottom: 30px;
+}
+
+/* 🔦 Destaques */
+.highlight {
+  font-weight: bold;
+  color: var(--highlight-text);
+  background-color: var(--highlight-bg);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* ✅ Lista como cartões com animação */
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.index-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.index-list a {
+  display: block;
+  background-color: var(--card-bg);
+  border: 2px solid transparent;
+  padding: 20px;
+  border-radius: 12px;
+  color: var(--text-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.index-list a:hover {
+  border-color: var(--accent-color);
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  color: var(--accent-color);
+}
+
+/* 🤸‍♂️ Animação no hover de emojis */
+.index-list a:hover::before {
+  animation: bounce 0.4s ease-in-out;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* ❌ Remove marcador de lista quando necessário */
+.no-check li::before {
+  content: "";
+}
+
+/* 🎨 Elementos visuais adicionais */
+.logo {
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+/* ⚠️ NOVO layout em coluna (stack) */
+.container-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.left,
+.right {
+  flex: 1;
+  min-width: 300px;
+  background-color: var(--card-bg);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* ⚠️ Aviso/Disclaimer */
+.disclaimer {
+  background-color: #fefae0;
+  color: #a68b00;
+  border-left: 8px solid #ffd700;
+  padding: 20px;
+  margin-bottom: 30px;
+  font-size: 1.2em;
+  font-weight: 500;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* 🔗 Links */
+a {
+  text-decoration: none;
+  color: var(--accent-color);
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #5f27cd;
+}
+
+/* 📏 Divisórias */
+hr {
+  margin: 40px 0;
+  border: none;
+  height: 1px;
+  background-color: var(--border-color);
+}
+
+/* ⬅️ Botão de voltar */
+.voltar {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.voltar a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--accent-color);
+  color: white;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.voltar a:hover {
+  background-color: #4b4be0;
+}
+
+/* 📋 Estilo refinado para tópicos dentro dos cards */
+.card ul {
+  padding-left: 0;
+  margin: 0;
+}
+
+.card li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 12px;
+  font-size: 0.8em;
+  line-height: 1.6;
+  color: var(--text-color);
+  text-align: left;
+}
+
+.card li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0.2em;
+  font-size: 1.2em;
+  color: var(--accent-color);
+}
+
+.card-image-large {
+  width: 100%;
+  margin-bottom: 1rem;
+  text-align: center; /* centraliza a imagem horizontalmente */
+  padding: 0.5rem;
+  background-color: #f3f3f3;
+  border-radius: 8px;
+}
+
+.card-image-large img {
+  width: auto;
+  height: 150px; /* altura fixa menor, ajustável */
+  object-fit: contain;
+  border-radius: 6px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-image-large img:hover {
+  transform: scale(2.5);
+  z-index: 999;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+}
+
+.card-image {
+  position: relative;
+}
+
+.card-image img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.card-image img:hover {
+  transform: scale(10); /* 200% do tamanho original */
+  transition: transform 0.3s ease-in-out;
+  z-index: 10;
+}
+
+/* .card-image img:hover {
+  transform: scale(1.5);
+} */
+
+/* Imagem de Citação */
+.citation-image {
+  width: 300px;
+  height: 200px;
+  border-radius: 10px;
+  margin: 20px 0;
+  transition: transform 0.3s ease;
+}
+
+/* Imagem de Citação */
+.quote-image {
+  width: 200px;
+  border-radius: 10px;
+  margin: 20px 0;
+  transition: transform 0.3s ease;
+}
+
+.quote-image:hover {
+  transform: scale(1.2);
+}
+
+/* 🧩 Cartões lado a lado */
+.cards-trio {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1;
+  min-width: 100px;
+  background-color: var(--card-bg);
+  border: 2px solid var(--border-color);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  font-size: 1.2em;
+  transition: transform 0.3s ease;
+}
+/* 
+
+.image-row {
+  display: flex;
+  gap: 10px; 
+  justify-content: center;
+  margin-top: 10px;
+}
+
+
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+}
+
+.card {
+  position: relative; 
+  flex: 1;
+  min-width: 100px;
+  background-color: var(--card-bg);
+  border: 2px solid var(--border-color);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  font-size: 1.2em;
+  transition: transform 0.3s ease;
+}
+
+.card-image img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  z-index: 1;
+}
+
+.card-image img:hover {
+  transform: scale(4);
+  position: absolute;
+  z-index: 9999;
+  top: -25px;
+  left: -25px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+*/
+
+/* 
+.image-row {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  margin-top: 10px;
+  position: relative;
+}
+
+.card-image {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 0.3s ease, z-index 0s;
+  z-index: 1;
+}
+
+.card-image:hover img {
+  transform: scale(3.5);
+  position: absolute;
+  top: -120px;
+  left: 50%;
+  transform: translateX(-50%) scale(3.5);
+  z-index: 9999;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+*/
+
+.cards-duo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.cards-duo .card {
+  flex: 0 1 calc(50% - 10px); /* Dois por linha */
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+/* 
+.image-row {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  margin-top: 10px;
+  position: relative;
+}
+
+.card-image {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+  overflow: visible;
+  z-index: 1;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  pointer-events: none; 
+} 
+
+*/
+.image-row {
+  display: flex;
+  gap: 40px; /* espaçamento grande entre imagens para evitar colisões */
+  justify-content: center; /* centraliza no card */
+  margin-top: 10px;
+  position: relative;
+}
+
+.card-image {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+  overflow: visible;
+  z-index: 1;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%; /* Imagem redonda */
+  transition: transform 0.3s ease;
+  pointer-events: none; /* evita que a imagem expandida capture hover sozinha */
+}
+
+.card-image:hover {
+  z-index: 9999;
+}
+
+.card-image:hover img {
+  transform: scale(3.5); /* zoom grande */
+  position: absolute;
+  top: -120px; /* sobe para não invadir os outros */
+  left: 50%;
+  transform: translateX(-50%) scale(3.5);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap; /* Evita quebra feia em telas pequenas */
+}
+
+.box {
+  flex: 1;
+  min-width: 200px; /* Para layout responsivo */
+  background-color: var(--card-bg);
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.box:hover {
+  transform: translateY(-5px);
+  border: 2px solid var(--accent-color);
+  color: var(--accent-color);
+}
