@@ -1,4 +1,17 @@
 /* 🌈 Paleta suave e moderna */
+/* :root {
+  --bg-color: #f9f9fb;
+  --primary-color: #34495e;
+  --accent-color: #6c5ce7;
+  --text-color: #2d3436;
+  --muted-text: #95a5a6;
+  --highlight-bg: #e0e7ff;
+  --highlight-text: #5f27cd;
+  --card-bg: #ffffff;
+  --border-color: #dcdde1;
+} */
+
+/* 🌈 Paleta suave e moderna */
 :root {
   --bg-color: #f9f9fb;
   --primary-color: #34495e;
@@ -9,6 +22,36 @@
   --highlight-text: #5f27cd;
   --card-bg: #ffffff;
   --border-color: #dcdde1;
+}
+
+.cover {
+  background-color: #a29bfe; /* Tom mais suave de azul */
+  background-image: url("https://www.example.com/imagem-de-capa.jpg"); /* Substitua pelo link da imagem */
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+  border-radius: 10px; /* Bordas arredondadas */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.cover h2 {
+  font-size: 38px;
+  font-family: "Arial", sans-serif;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra suave no texto */
+}
+
+.cover p {
+  font-size: 20px;
+  line-height: 1.6;
+  font-family: "Arial", sans-serif;
+  color: #f1f2f6; /* Cor mais suave para o texto */
+}
+
+.cover p strong {
+  color: #2d3436; /* Cor mais escura para destacar elementos */
 }
 
 /* 🌤️ Fundo com gradiente suave */
